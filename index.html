@@ -57,11 +57,14 @@
         </div>
     </div>
     <script>
+        let flag = false;
         document.addEventListener('click', function () {
+            if (flag) return;
             var audio = document.getElementById('js-video');
             audio.play()
             $('#img1').css("display", "none");
             $('#img2').css("display", "block");
+            flag = true
         })
         // $(function () {
         //     AudioControl('js-video');
